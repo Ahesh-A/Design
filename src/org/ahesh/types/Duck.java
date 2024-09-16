@@ -4,9 +4,6 @@ import org.ahesh.types.DuckInterface.FlyBehaviour;
 public class Duck {
 
     FlyBehaviour flyBehaviour;
-    public Duck(FlyBehaviour flyBehaviour) {
-        this.flyBehaviour = flyBehaviour;
-    }
     public void swim() {
         System.out.println("Im Generic duck swimming, quack quack...");
     }
