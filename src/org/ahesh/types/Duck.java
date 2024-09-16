@@ -1,6 +1,7 @@
 package org.ahesh.types;
 
 public class Duck {
+    FlyBehaviour flyBehaviour;
     public void swim() {
         System.out.println("Im Generic duck swimming, quack quack...");
     }
