@@ -1,6 +1,5 @@
 import org.ahesh.types.Duck;
 import org.ahesh.types.DuckTypes.MallardDuck;
-import org.ahesh.types.FlyBehaviour.MallardDuckFlyBehaviour;
 import org.ahesh.types.FlyBehaviour.RubberDuckFlyBehaviour;
 
 public class Main {
