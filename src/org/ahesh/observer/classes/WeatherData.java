@@ -6,7 +6,14 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class WeatherData implements Subject {
-    List<Observer> observerList = new ArrayList<>();
+    private float temperature;
+    private float humidity;
+    private float pressure;
+    private final List<Observer> observerList;
+    public WeatherData() {
+        observerList = new ArrayList<>();
+    }
+
 
     @Override
     public void registerObserver(Observer observer) {
@@ -24,14 +31,14 @@ public class WeatherData implements Subject {
     @Override
     public void notifyObserver(Observer observer) {
         if(observer != null) {
-            observer.update();
+            observer.update(temperature, humidity, pressure);
         }
     }
 
     public void measurementsChanged() {
 
         for (Observer observer : observerList) {
-            observer.update();
+            notifyObserver(observer);
         }
     }
 }
