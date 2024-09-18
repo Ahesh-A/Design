@@ -1,4 +1,4 @@
 package org.ahesh.observer.classes.Display;
 
-public class StatisticsDisplay {
+public class ForeCastDisplay {
 }
