@@ -7,7 +7,7 @@ public class StatisticsDisplay implements Display, Observer {
     public void display() {
 
     }
-    public void update() {
+    public void update(float temperature, float humidity, float pressure) {
 
     }
 }

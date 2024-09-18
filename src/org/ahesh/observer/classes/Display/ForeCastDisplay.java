@@ -8,7 +8,7 @@ public class ForeCastDisplay implements Display, Observer{
 
     }
 
-    public void update() {
+    public void update(float temperature, float humidity, float pressure) {
 
     }
 }
