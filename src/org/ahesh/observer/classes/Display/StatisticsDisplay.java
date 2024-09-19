@@ -43,11 +43,14 @@ public class StatisticsDisplay implements Display, Observer {
     }
 
     public void display() {
-        System.out.println();
+        System.out.println("Statistics: ");
+        System.out.println("Temperature + Humidity + Pressure = " + temperature + humidity + pressure);
     }
     public void update(float temperature, float humidity, float pressure) {
         setTemperature(temperature);
         setHumidity(humidity);
         setPressure(pressure);
+
+        display();
     }
 }

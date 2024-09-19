@@ -14,6 +14,8 @@ public class CurrentConditionsDisplay implements Observer, Display {
         setTemperature(temperature);
         setHumidity(humidity);
         setPressure(pressure);
+
+        display();
     }
 
     public float getTemperature() {
@@ -41,6 +43,7 @@ public class CurrentConditionsDisplay implements Observer, Display {
     }
 
     public void display(){
+        System.out.println("Current Conditions: ");
         System.out.println("Temperature: " + temperature + "\n" + "Pressure: " + pressure + "Humidity: " + humidity);
     }
 

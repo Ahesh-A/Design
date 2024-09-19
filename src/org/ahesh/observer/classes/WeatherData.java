@@ -21,6 +21,11 @@ public class WeatherData implements Subject {
             observerList.add(observer);
         }
     }
+
+    public List<Observer> getObserverList() {
+        return observerList;
+    }
+
     @Override
     public void removeObserver(Observer observer) {
         if(observer != null && !observerList.isEmpty()) {
@@ -35,6 +40,12 @@ public class WeatherData implements Subject {
         }
     }
 
+    public void setMeasurements(float temperature, float humidity, float pressure) {
+        this.temperature = temperature;
+        this.humidity = humidity;
+        this.pressure = pressure;
+        measurementsChanged();
+    }
     public void measurementsChanged() {
 
         for (Observer observer : observerList) {

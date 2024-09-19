@@ -1,3 +1,10 @@
+import org.ahesh.observer.classes.Display.CurrentConditionsDisplay;
+import org.ahesh.observer.classes.Display.ForeCastDisplay;
+import org.ahesh.observer.classes.Display.HeatIndexDisplay;
+import org.ahesh.observer.classes.Display.StatisticsDisplay;
+import org.ahesh.observer.classes.WeatherData;
+import org.ahesh.observer.types.Observer;
+import org.ahesh.observer.types.Subject;
 import org.ahesh.types.Duck;
 import org.ahesh.types.DuckTypes.MallardDuck;
 import org.ahesh.types.FlyBehaviour.RubberDuckFlyBehaviour;
@@ -5,11 +12,27 @@ import org.ahesh.types.QuackBehaviour.MallardDuckQuackBheaviour;
 
 public class Main {
     public static void main(String[] args) {
-        Duck mallardDuck = new MallardDuck();
-        mallardDuck.setFlyBehaviour(new RubberDuckFlyBehaviour());
-        mallardDuck.setQuackBehaviour(new MallardDuckQuackBheaviour());
+//        Duck mallardDuck = new MallardDuck();
+//        mallardDuck.setFlyBehaviour(new RubberDuckFlyBehaviour());
+//        mallardDuck.setQuackBehaviour(new MallardDuckQuackBheaviour());
+//
+//        mallardDuck.performFly();
+//        mallardDuck.performQuack();
+        WeatherData weatherData = new WeatherData();
+        Observer currentConditionDisplay = new CurrentConditionsDisplay();
+        Observer foreCastDisplay = new ForeCastDisplay();
+        Observer statisticsDisplay = new StatisticsDisplay();
+        Observer heatIndexObserver = new HeatIndexDisplay();
 
-        mallardDuck.performFly();
-        mallardDuck.performQuack();
+        weatherData.registerObserver(currentConditionDisplay);
+        weatherData.registerObserver(foreCastDisplay);
+        weatherData.registerObserver(statisticsDisplay);
+        weatherData.registerObserver(heatIndexObserver);
+
+        weatherData.setMeasurements(10, 23, 34);
+
+        weatherData.removeObserver(currentConditionDisplay);
+
+        weatherData.setMeasurements(10, 23, 34);
     }
 }

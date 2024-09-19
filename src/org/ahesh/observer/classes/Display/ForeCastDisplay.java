@@ -9,10 +9,7 @@ public class ForeCastDisplay implements Display, Observer{
     private float humidity;
     private float pressure;
     private Subject subject;
-    public void display() {
 
-        System.out.println();
-    }
 
     public float getTemperature() {
         return temperature;
@@ -47,6 +44,15 @@ public class ForeCastDisplay implements Display, Observer{
     }
 
     public void update(float temperature, float humidity, float pressure) {
+        setTemperature(temperature);
+        setHumidity(humidity);
+        setPressure(pressure);
 
+        display();
+    }
+    public void display() {
+        System.out.println("Forecast: ");
+        System.out.println("Temperature: " + temperature + "Humidity: " + humidity);
+        System.out.println("You might expect a cooler weather.");
     }
 }
