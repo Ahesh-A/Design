@@ -14,6 +14,11 @@ public class HeatIndexDisplay implements Observer, Display {
     private float pressure;
 
     private WeatherData weatherData;
+
+    public HeatIndexDisplay(WeatherData weatherData) {
+        this.weatherData = weatherData;
+        weatherData.registerObserver(this);
+    }
     public float getTemperature() {
         return temperature;
     }

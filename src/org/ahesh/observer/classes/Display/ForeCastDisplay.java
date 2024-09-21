@@ -10,6 +10,10 @@ public class ForeCastDisplay implements Display, Observer{
     private float pressure;
 
     private WeatherData weatherData;
+    public ForeCastDisplay(WeatherData weatherData) {
+        this.weatherData = weatherData;
+        weatherData.registerObserver(this);
+    }
 
     public float getTemperature() {
         return temperature;

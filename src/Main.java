@@ -19,10 +19,10 @@ public class Main {
 //        mallardDuck.performFly();
 //        mallardDuck.performQuack();
         WeatherData weatherData = new WeatherData();
-        Observer currentConditionDisplay = new CurrentConditionsDisplay();
-        Observer foreCastDisplay = new ForeCastDisplay();
-        Observer statisticsDisplay = new StatisticsDisplay();
-        Observer heatIndexObserver = new HeatIndexDisplay();
+        Observer currentConditionDisplay = new CurrentConditionsDisplay(weatherData);
+        Observer foreCastDisplay = new ForeCastDisplay(weatherData);
+        Observer statisticsDisplay = new StatisticsDisplay(weatherData);
+        Observer heatIndexObserver = new HeatIndexDisplay(weatherData);
 
         weatherData.registerObserver(currentConditionDisplay);
         weatherData.registerObserver(foreCastDisplay);

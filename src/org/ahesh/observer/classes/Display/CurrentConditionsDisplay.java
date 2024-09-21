@@ -10,6 +10,11 @@ public class CurrentConditionsDisplay implements Observer, Display {
     private float humidity;
     private float pressure;
     private WeatherData weatherData;
+
+    public CurrentConditionsDisplay(WeatherData weatherData) {
+        this.weatherData = weatherData;
+        weatherData.registerObserver(this);
+    }
     public void update() {
         setTemperature(weatherData.getTemperature());
         setHumidity(weatherData.getHumidity());

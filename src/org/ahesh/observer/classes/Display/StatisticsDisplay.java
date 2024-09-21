@@ -11,6 +11,11 @@ public class StatisticsDisplay implements Display, Observer {
     private float pressure;
     WeatherData weatherData;
 
+    public StatisticsDisplay(WeatherData weatherData) {
+        this.weatherData = weatherData;
+        weatherData.registerObserver(this);
+    }
+
     public float getTemperature() {
         return temperature;
     }
