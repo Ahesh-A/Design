@@ -33,10 +33,22 @@ public class WeatherData implements Subject {
         }
     }
 
+    public float getTemperature() {
+        return temperature;
+    }
+
+    public float getHumidity() {
+        return humidity;
+    }
+
+    public float getPressure() {
+        return pressure;
+    }
+
     @Override
     public void notifyObserver(Observer observer) {
         if(observer != null) {
-            observer.update(temperature, humidity, pressure);
+            observer.update();
         }
     }
 

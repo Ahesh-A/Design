@@ -1,5 +1,6 @@
 package org.ahesh.observer.classes.Display;
 
+import org.ahesh.observer.classes.WeatherData;
 import org.ahesh.observer.types.Display;
 import org.ahesh.observer.types.Observer;
 import org.ahesh.observer.types.Subject;
@@ -8,15 +9,7 @@ public class StatisticsDisplay implements Display, Observer {
     private float temperature;
     private float humidity;
     private float pressure;
-    Subject subject;
-
-    public Subject getSubject() {
-        return subject;
-    }
-
-    public void setSubject(Subject subject) {
-        this.subject = subject;
-    }
+    WeatherData weatherData;
 
     public float getTemperature() {
         return temperature;
@@ -46,10 +39,11 @@ public class StatisticsDisplay implements Display, Observer {
         System.out.println("Statistics: ");
         System.out.println("Temperature + Humidity + Pressure = " + temperature + humidity + pressure);
     }
-    public void update(float temperature, float humidity, float pressure) {
-        setTemperature(temperature);
-        setHumidity(humidity);
-        setPressure(pressure);
+    public void update() {
+
+        setTemperature(weatherData.getTemperature());
+        setHumidity(weatherData.getHumidity());
+        setPressure(weatherData.getPressure());
 
         display();
     }
