@@ -11,5 +11,11 @@ public abstract class Breverage {
     public String getDescription() {
         return this.description;
     }
+    public Size getSize() {
+        return size;
+    }
+    public void setSize(Size size) {
+        this.size = size;
+    }
     public abstract double cost();
 }
