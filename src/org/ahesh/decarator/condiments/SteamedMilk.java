@@ -4,11 +4,11 @@ import org.ahesh.decarator.Breverage;
 import org.ahesh.decarator.CondimentDecorator;
 
 public class SteamedMilk extends CondimentDecorator {
-    public SteamedMilk(Breverage breverage) {
-        super(breverage);
+    public SteamedMilk(Breverage beverage) {
+        this.breverage = beverage;
     }
     @Override
     public double cost() {
-        return 0.10;
+        return 0.10 + breverage.cost();
     }
 }

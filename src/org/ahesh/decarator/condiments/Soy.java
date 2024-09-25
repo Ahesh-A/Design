@@ -5,10 +5,10 @@ import org.ahesh.decarator.CondimentDecorator;
 
 public class Soy extends CondimentDecorator {
     public Soy(Breverage breverage) {
-        super(breverage);
+        this.breverage = breverage;
     }
     @Override
     public double cost() {
-        return 0.15;
+        return 0.15 + breverage.cost();
     }
 }

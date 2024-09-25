@@ -1,6 +1,7 @@
 import org.ahesh.decarator.Breverage;
 import org.ahesh.decarator.beverages.DarkRoast;
 import org.ahesh.decarator.condiments.Milk;
+import org.ahesh.decarator.condiments.Mocha;
 import org.ahesh.observer.classes.Display.CurrentConditionsDisplay;
 import org.ahesh.observer.classes.Display.ForeCastDisplay;
 import org.ahesh.observer.classes.Display.HeatIndexDisplay;
@@ -39,6 +40,8 @@ public class Main {
 //        weatherData.setMeasurements(10, 23, 34);
         Breverage breverage = new DarkRoast();
         breverage = new Milk(breverage);
+        breverage = new Mocha(breverage);
+        breverage = new Mocha(breverage);
 
         System.out.println(breverage.cost());
     }

@@ -4,10 +4,10 @@ import org.ahesh.decarator.CondimentDecorator;
 
 public class Mocha extends CondimentDecorator{
     public  Mocha(Breverage breverage) {
-        super(breverage);
+        this.breverage = breverage;
     }
     @Override
     public double cost() {
-        return 0.15;
+        return 0.15 + breverage.cost();
     }
 }
