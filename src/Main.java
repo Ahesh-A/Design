@@ -39,10 +39,12 @@ public class Main {
 //
 //        weatherData.setMeasurements(10, 23, 34);
         Breverage breverage = new DarkRoast();
+
         breverage = new Milk(breverage);
         breverage = new Mocha(breverage);
         breverage = new Mocha(breverage);
 
+        System.out.println(breverage.getDescription());
         System.out.println(breverage.cost());
     }
 }
