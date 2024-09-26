@@ -11,4 +11,8 @@ public class Milk extends CondimentDecorator {
     public double cost() {
         return 0.10 + breverage.cost();
     }
+    @Override
+    public String getDescription() {
+        return "Milk";
+    }
 }
