@@ -2,6 +2,7 @@ import org.ahesh.decarator.Breverage;
 import org.ahesh.decarator.beverages.DarkRoast;
 import org.ahesh.decarator.condiments.Milk;
 import org.ahesh.decarator.condiments.Mocha;
+import org.ahesh.decarator.reader.LowerCaseInputStream;
 import org.ahesh.observer.classes.Display.CurrentConditionsDisplay;
 import org.ahesh.observer.classes.Display.ForeCastDisplay;
 import org.ahesh.observer.classes.Display.HeatIndexDisplay;
@@ -14,7 +15,11 @@ import org.ahesh.types.DuckTypes.MallardDuck;
 import org.ahesh.types.FlyBehaviour.RubberDuckFlyBehaviour;
 import org.ahesh.types.QuackBehaviour.MallardDuckQuackBheaviour;
 
+import java.io.*;
+import java.time.Instant;
+
 public class Main {
+
     public static void main(String[] args) {
 //        Duck mallardDuck = new MallardDuck();
 //        mallardDuck.setFlyBehaviour(new RubberDuckFlyBehaviour());
@@ -38,13 +43,24 @@ public class Main {
 //        weatherData.removeObserver(currentConditionDisplay);
 //
 //        weatherData.setMeasurements(10, 23, 34);
-        Breverage breverage = new DarkRoast();
-
-        breverage = new Milk(breverage);
-        breverage = new Mocha(breverage);
-        breverage = new Mocha(breverage);
-
-        System.out.println(breverage.getDescription());
-        System.out.println(breverage.cost());
+//        Breverage breverage = new DarkRoast();
+//
+//        breverage = new Milk(breverage);
+//        breverage = new Mocha(breverage);
+//        breverage = new Mocha(breverage);
+//
+//        System.out.println(breverage.getDescription());
+//        System.out.println(breverage.cost());
+        try{
+            InputStream in = new BufferedInputStream(new FileInputStream("file.txt"));
+            int c;
+            while((c = in.read()) != -1) {
+                System.out.print((char)c);
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
