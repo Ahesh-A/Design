@@ -8,4 +8,12 @@ public abstract class Pizza {
     public void bake() {
         System.out.println("baking pizza");
     }
+
+    public void cut() {
+        System.out.println("cutting pizza");
+    }
+
+    public void pack() {
+        System.out.println("packing pizza");
+    }
 }
