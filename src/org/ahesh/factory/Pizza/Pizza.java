@@ -5,4 +5,7 @@ public abstract class Pizza {
         System.out.println("perparing pizza");
     }
 
+    public void bake() {
+        System.out.println("baking pizza");
+    }
 }
