@@ -1,4 +1,4 @@
 package org.ahesh.factory.ingredients;
 
-public class Veggies  {
+public class Sauce {
 }
