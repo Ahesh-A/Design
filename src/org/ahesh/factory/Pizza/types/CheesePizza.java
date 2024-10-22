@@ -8,6 +8,7 @@ public class CheesePizza extends Pizza{
     public CheesePizza (PizzaIngredientFactory pizzaIngredientFactory) {
         this.pizzaIngredientFactory = pizzaIngredientFactory;
     }
+    @Override
     public void prepare() {
         dough = pizzaIngredientFactory.createDough();
         sauce = pizzaIngredientFactory.createSauce();
