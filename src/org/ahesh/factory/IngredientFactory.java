@@ -6,6 +6,7 @@ public interface IngredientFactory {
     void createDough();
     void createSauce();
     void createCheese();
+    void createVeggies();
     void createClams();
     void createPepperoni();
 }
