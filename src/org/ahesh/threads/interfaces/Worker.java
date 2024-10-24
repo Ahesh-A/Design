@@ -1,4 +1,7 @@
 package org.ahesh.threads.interfaces;
 
-public interface Worker {
+import org.ahesh.singleton.Singleton;
+
+public interface Worker{
+    Singleton getResult();
 }
