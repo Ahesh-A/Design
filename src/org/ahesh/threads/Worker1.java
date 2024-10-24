@@ -1,4 +1,4 @@
-package org.ahesh.singleton;
+package org.ahesh.threads;
 
 public class Worker1 extends Thread {
 
