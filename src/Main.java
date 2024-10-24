@@ -21,46 +21,6 @@ import java.time.Instant;
 public class Main {
 
     public static void main(String[] args) {
-//        Duck mallardDuck = new MallardDuck();
-//        mallardDuck.setFlyBehaviour(new RubberDuckFlyBehaviour());
-//        mallardDuck.setQuackBehaviour(new MallardDuckQuackBheaviour());
-//
-//        mallardDuck.performFly();
-//        mallardDuck.performQuack();
-//        WeatherData weatherData = new WeatherData();
-//        Observer currentConditionDisplay = new CurrentConditionsDisplay(weatherData);
-//        Observer foreCastDisplay = new ForeCastDisplay(weatherData);
-//        Observer statisticsDisplay = new StatisticsDisplay(weatherData);
-//        Observer heatIndexObserver = new HeatIndexDisplay(weatherData);
-//
-//        weatherData.registerObserver(currentConditionDisplay);
-//        weatherData.registerObserver(foreCastDisplay);
-//        weatherData.registerObserver(statisticsDisplay);
-//        weatherData.registerObserver(heatIndexObserver);
-//
-//        weatherData.setMeasurements(10, 23, 34);
-//
-//        weatherData.removeObserver(currentConditionDisplay);
-//
-//        weatherData.setMeasurements(10, 23, 34);
-//        Breverage breverage = new DarkRoast();
-//
-//        breverage = new Milk(breverage);
-//        breverage = new Mocha(breverage);
-//        breverage = new Mocha(breverage);
-//
-//        System.out.println(breverage.getDescription());
-//        System.out.println(breverage.cost());
-        try{
-            InputStream in = new BufferedInputStream(new FileInputStream("file.txt"));
-            int c;
-            while((c = in.read()) != -1) {
-                System.out.print((char)c);
-            }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        Thread thred1 = new Thread();
     }
 }
