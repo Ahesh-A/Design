@@ -1,11 +1,16 @@
 package org.ahesh.singleton;
 
 public class Singleton {
-    static Singleton singleton;
+    private static Singleton singleton;
     private Singleton() {}
-    public static synchronized Singleton getInstance() {
+
+    public static Singleton getInstance() {
         if(singleton == null) {
-           singleton = new Singleton();
+            synchronized (Singleton.class) {
+                if(singleton == null) {
+                    singleton = new Singleton();
+                }
+            }
         }
         return singleton;
     }
