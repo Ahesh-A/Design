@@ -21,5 +21,11 @@ public class SingletonBreaker {
         return instance2;
     }
 
+    public void breakSingleton() {
+        Singleton instance = Singleton.getInstance();
+        Singleton instance1 = createFakeInstanceOfSingleton();
+
+        System.out.println(instance1.equals(instance));
+    }
 
 }
